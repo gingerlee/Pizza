@@ -27,7 +27,7 @@ Pizza.prototype.setPizzaSizePrice = function() {
 function resetSelects() {
   $("select#pizza-base-select").val("null");
   $("select#pizza-size-select").val("null");
-  $('.toppings input:checked').removeAttr('checked');
+  $('input:checkbox').removeAttr('checked');
 }
 
 // User Interface Logic
@@ -49,11 +49,14 @@ $(function() {
     var total = basePrice + sizePrice + addOnsPrice;
 
     $("#place-order-button").click(function() {
-      $("#order-display").show();
       $("#pizza-base").text(customPizza.base);
       $("#pizza-size").text(customPizza.size);
       $("#pizza-add-ons").append(selectedAddOns.join(", "));
       $("#pizza-price").text(total);
+      $("#order-display").fadeIn();
+      $("#pizza-form").hide();
+      $("#menu-header").hide();
+      $("#place-order-button").hide();
 
       resetSelects();
     });
