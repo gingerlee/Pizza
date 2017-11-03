@@ -1,5 +1,4 @@
 body {
-  background-image: url("img/pizza-dog.jpg");
   z-index: -1;
   font-family: 'Quicksand', sans-serif;
 }
@@ -9,7 +8,7 @@ h2 {
   color: #f2485c;
   font-weight: bold;
   text-align: center;
-  margin: 2%;
+  margin: 1%;
 }
 
 #order-display {
@@ -19,25 +18,32 @@ h2 {
 }
 
 h1 {
-  margin: 10px;
+
   color: #f2485c;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  font-size: 60px;
-  margin: 5%;
+  font-size: 100px;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 .card {
   padding: 10px;
+  margin-top: 2%;
 }
 select {
   margin-bottom: 5px 5px;
 }
 
 #place-order-button {
-  margin: 5%;
+  margin-bottom: 5%;
 }
+
+
 
 #reorder {
   color: white;
