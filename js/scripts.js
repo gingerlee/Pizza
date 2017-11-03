@@ -6,11 +6,11 @@ function Pizza(base, size) {
   this.price = 0;
 }
 
-// Pizza.prototype.setPizzaAddOnsPrice = function () {
-//   if (this.addOns) {
-//     return this.addOns.length * 2; //will take number of toppings in array and multiply by 2
-//   }
-// }
+Pizza.prototype.setPizzaAddOnsPrice = function () {
+  if (this.addOns) {
+    return this.addOns.length * 2; //will take number of toppings in array and multiply by 2
+  }
+}
 
 Pizza.prototype.setPizzaBasePrice = function() {
   if (this.base === "cheese") {
@@ -37,21 +37,22 @@ function resetSelects() {
 
 // User Interface Logic
 $(function() {
-  $("form#pizza-form").submit(function(event) {
+  $("form").submit(function(event) {
     event.preventDefault();
 
     var selectedBase = $("#pizza-base-select").val();
     var selectedSize = $("#pizza-size-select").val();
-    var addOns = [];
+    var selectedAddOns = [];
     $('.toppings input:checked').each(function() {
-      addOns.push($(this).val());
+      selectedAddOns.push($(this).val());
     });
-    var customPizza = new Pizza(selectedBase, selectedSize, addOns);
+    var customPizza = new Pizza(selectedBase, selectedSize, selectedAddOns);
     debugger;
 
     var basePrice = customPizza.setPizzaBasePrice();
     var sizePrice = customPizza.setPizzaSizePrice();
-    var addOnsPrice = addOns.length * 2;
+    var addOnsPrice = customPizza.setPizzaAddOnsPrice();
+    // var addOnsPrice = selectedAddOns.length * 2;
     var total = basePrice + sizePrice + addOnsPrice;
     console.log(total);
 
@@ -60,7 +61,7 @@ $(function() {
       $("#order-display").show();
       $("#pizza-base").text(customPizza.base);
       $("#pizza-size").text(customPizza.size);
-      $("#pizza-add-ons").append(customPizza.addOns + ", ");
+      $("#pizza-add-ons").text(customPizza.addOns + ", ");
       $("#pizza-price").text(total);
 
       resetSelects();
