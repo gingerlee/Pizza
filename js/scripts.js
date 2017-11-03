@@ -43,10 +43,9 @@ $(function() {
     var selectedBase = $("#pizza-base-select").val();
     var selectedSize = $("#pizza-size-select").val();
     var addOns = [];
-    var selectedAddOns = $('input:checked').map(function() {
-      return $(this).val();
+    $('.toppings input:checked').each(function() {
+      addOns.push($(this).val());
     });
-    addOns.push(selectedAddOns);
     var customPizza = new Pizza(selectedBase, selectedSize, addOns);
     debugger;
 
