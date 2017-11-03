@@ -2,7 +2,7 @@
 function Pizza(base, size) {
   this.base = base;
   this.size = size;
-  this.addOns;
+  this.addOns = [];
   this.price = 0;
 }
 
@@ -25,8 +25,8 @@ Pizza.prototype.setPizzaSizePrice = function() {
 
 
 function resetSelects() {
-  $("select#pizza-base-select").val("");
-  $("select#pizza-size-select").val("");
+  $("select#pizza-base-select").val("null");
+  $("select#pizza-size-select").val("null");
   $('.toppings input:checked').removeAttr('checked');
 }
 
@@ -47,15 +47,12 @@ $(function() {
     var sizePrice = customPizza.setPizzaSizePrice();
     var addOnsPrice = selectedAddOns.length * 2;
     var total = basePrice + sizePrice + addOnsPrice;
-    console.log(total);
 
-
-    debugger;
     $("#place-order-button").click(function() {
       $("#order-display").show();
       $("#pizza-base").text(customPizza.base);
       $("#pizza-size").text(customPizza.size);
-      $("#pizza-add-ons").append(selectedAddOns.toString(" " + " ,"));
+      $("#pizza-add-ons").append(selectedAddOns.join(", "));
       $("#pizza-price").text(total);
 
       resetSelects();
