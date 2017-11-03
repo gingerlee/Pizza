@@ -48,17 +48,15 @@ $(function() {
     var addOnsPrice = selectedAddOns.length * 2;
     var total = basePrice + sizePrice + addOnsPrice;
 
-    $("#place-order-button").click(function() {
-      $("#pizza-base").text(customPizza.base);
-      $("#pizza-size").text(customPizza.size);
-      $("#pizza-add-ons").append(selectedAddOns.join(", "));
-      $("#pizza-price").text(total);
-      $("#order-display").fadeIn();
-      $("#pizza-form").hide();
-      $("#menu-header").hide();
-      $("#place-order-button").hide();
+    $("#pizza-base").text(customPizza.base);
+    $("#pizza-size").text(customPizza.size);
+    $("#pizza-add-ons").append(selectedAddOns.join(", "));
+    $("#pizza-price").text(total);
+    $("#order-display").fadeIn();
+    $("#pizza-form").hide();
+    $("#menu-header").hide();
+    $("#place-order-button").hide();
 
-      resetSelects();
-    });
+    resetSelects();
   });
 });
