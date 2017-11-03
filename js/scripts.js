@@ -42,15 +42,18 @@ $(function() {
 
     var selectedBase = $("#pizza-base-select").val();
     var selectedSize = $("#pizza-size-select").val();
-
-    var selectedAddOns = $("#pizza-add-on-select").val();
-
-    var customPizza = new Pizza(selectedBase, selectedSize, selectedAddOn);
+    var addOns = [];
+    var selectedAddOns = $('input:checked').map(function() {
+      return $(this).val();
+    });
+    addOns.push(selectedAddOns);
+    var customPizza = new Pizza(selectedBase, selectedSize, addOns);
+    debugger;
 
     var basePrice = customPizza.setPizzaBasePrice();
     var sizePrice = customPizza.setPizzaSizePrice();
-    var addOnPrice = customPizza.setPizzaAddOnsPrice();
-    var total = basePrice + sizePrice + addOnPrice;
+    var addOnsPrice = customPizza.setPizzaAddOnsPrice();
+    var total = basePrice + sizePrice + addOnsPrice;
     console.log(total);
 
 
@@ -60,7 +63,7 @@ $(function() {
       $("#pizza-size").text(customPizza.size);
       $("#pizza-add-ons").append(customPizza.addOns + ", ");
       $("#pizza-price").text(total);
-      debugger;
+
       resetSelects();
     });
   });
