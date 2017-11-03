@@ -6,11 +6,11 @@ function Pizza(base, size) {
   this.price = 0;
 }
 
-Pizza.prototype.setPizzaAddOnsPrice = function () {
-  if (this.addOns = true) {
-    return this.addOns.length * 2; //will take number of toppings in array and multiply by 2
-  }
-}
+// Pizza.prototype.setPizzaAddOnsPrice = function () {
+//   if (this.addOns) {
+//     return this.addOns.length * 2; //will take number of toppings in array and multiply by 2
+//   }
+// }
 
 Pizza.prototype.setPizzaBasePrice = function() {
   if (this.base === "cheese") {
@@ -32,7 +32,7 @@ Pizza.prototype.setPizzaSizePrice = function() {
 function resetSelects() {
   $("select#pizza-base-select").val("");
   $("select#pizza-size-select").val("");
-  $("select#pizza-add-on-select").val("");
+  $('.toppings input:checked').removeAttr('checked');
 }
 
 // User Interface Logic
@@ -51,7 +51,7 @@ $(function() {
 
     var basePrice = customPizza.setPizzaBasePrice();
     var sizePrice = customPizza.setPizzaSizePrice();
-    var addOnsPrice = customPizza.setPizzaAddOnsPrice();
+    var addOnsPrice = addOns.length * 2;
     var total = basePrice + sizePrice + addOnsPrice;
     console.log(total);
 
