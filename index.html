@@ -36,7 +36,7 @@
             <div class="form-group card" style="width: 20rem;">
               <div class="card-body">
                 <h4 class="card-title">Step 2: Choose Size</h4>
-                <p class="card-text">See Size Guide</p>
+                <p class="card-text">Sm 14" - Md 18" - Lg 22"</p>
               </div>
               <select id="pizza-size-select" class="form-control">
                 <option value="null">Please select a pizza size</option>
@@ -50,7 +50,7 @@
             <div class="form-group card" style="width: 20rem;">
               <div class="card-body">
                 <h4 class="card-title">Step 3: Add Ons</h4>
-                <p class="card-text">$1 each - Locally Sourced</p>
+                <p class="card-text">$1 each - All Locally Sourced</p>
               </div>
               <select id="pizza-size-select" class="form-control">
                 <option value="null">Please select add on</option>
@@ -62,9 +62,23 @@
           </div>
         </div>
         <div class="row">
-          
+          <button type="submit" class="btn btn-dark btn-lg btn-block">Place Order</button>
         </div>
       </form>
+      <div class="row" id="order-display">
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+            <h4 class="card-title">Your Order Details:</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Please allow 20-30 minutes</h6>
+            <p>
+              Pizza Base: <span id="pizza-base"></span><br>
+              Pizza Size: <span id="pizza-size"></span><br>
+              Add Ons: <span id="pizza-add-ons"></span><br>
+              Price: $<span id="pizza-price"></span><br>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
