@@ -1,3 +1,7 @@
 #menu-header {
   margin-left: 40%;
 }
+
+#order-display {
+  display: none;
+}

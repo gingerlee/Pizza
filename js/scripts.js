@@ -9,8 +9,7 @@ this.price = 0;
 Pizza.prototype.setPizzaBasePrice = function() {
   if (this.base === "cheese") {
     return 8;
-  } else if (this.base === "pepperoni" || this.base === "pesto") {
-    return 10;
+  } else { return 10;
   }
 }
 
@@ -54,6 +53,12 @@ $(function() {
     var total = basePrice + sizePrice + addOnPrice;
     console.log(total);
 
-    $("")
+    $("#place-order-button").click(function() {
+      $("#order-display").show();
+      $("#pizza-base").text(customPizza.base);
+      $("#pizza-size").text(customPizza.size);
+      $("#pizza-add-ons").text(customPizza.addOn);
+      $("#pizza-price").text(total);
+    });
   });
 });
