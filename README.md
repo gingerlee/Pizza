@@ -16,7 +16,7 @@ _This application will allow the user to use a form to order a pizza, using java
 
 | Behavior   |      Input      |  Output |
 |----------|:-------------:|------:|
-| User is able to make an initial selection |  Cheese Pizza | Cheese Pizza |
+| User is able to make an initial base selection |  Cheese Pizza | Cheese Pizza |
 | User is able to add toppings on any pizza  | Add Extra Cheese to Cheese Pizza |   Cheese Pizza with extra cheese |
 | User is able to choose size of pizza  | Large Cheese Pizza with extra cheese |  $22  |
 | After user places order, Application will display order details  | Large Cheese Pizza with extra cheese |  $22  |
