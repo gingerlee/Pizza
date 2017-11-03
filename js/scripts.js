@@ -7,7 +7,9 @@ function Pizza(base, size) {
 }
 
 Pizza.prototype.setPizzaAddOnsPrice = function () {
-
+  if (this.addOns = true) {
+    return this.addOns.length * 2; //will take number of toppings in array and multiply by 2
+  }
 }
 
 Pizza.prototype.setPizzaBasePrice = function() {
@@ -56,7 +58,7 @@ $(function() {
       $("#order-display").show();
       $("#pizza-base").text(customPizza.base);
       $("#pizza-size").text(customPizza.size);
-      $("#pizza-add-ons").text(customPizza.addOn);
+      $("#pizza-add-ons").append(customPizza.addOns + ", ");
       $("#pizza-price").text(total);
       debugger;
       resetSelects();
