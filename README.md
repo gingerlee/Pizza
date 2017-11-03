@@ -10,16 +10,16 @@ _This application will allow the user to use a form to order a pizza, using java
 
 ## Setup/Installation Requirements
 
-* Visit this app by clicking on the link below, or copying it into a browser window,
+* Visit this app by clicking on the link below, or copying it into a browser window, https://gingerlee.github.io/pizza-parlour/
 
 ## Project Specifications
 
 | Behavior   |      Input      |  Output |
 |----------|:-------------:|------:|
-| User is able to make an initial base selection |  Cheese Pizza | Cheese Pizza |
-| User is able to add toppings on any pizza  | Add Extra Cheese to Cheese Pizza |   Cheese Pizza with extra cheese |
-| User is able to choose size of pizza  | Large Cheese Pizza with extra cheese |  $22  |
-| After user places order, Application will display order details  | Large Cheese Pizza with extra cheese |  $22  |
+| User is able to make an initial pizza base selection |  Pesto | Pesto |
+| User is able to choose size of pizza  | Large Pizza |  Large Pizza  |
+| User is able to add toppings on any pizza  | Add Mushrooms and Arugula |   Add Mushrooms and Arugula |
+| After user places order, Application will display order details with price based on selection  | Large Pesto Pizza with Mushrooms, Arugula, Sausage |  Large Pesto Pizza with Mushrooms, Arugula, Sausage $22  |
 
 
 ## Support and contact details
