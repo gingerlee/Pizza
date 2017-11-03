@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <title>Pizza Parlour</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>The Pizza Parlour</h1>
+      </div>
+      <div class="row" id="menu-header">
+        <h2>Menu</h2>
+      </div>
+      <form>
+        <div class="row" id="menu-cards-row">
+          <div class="col-md-4">
+            <div class="form-group card" style="width: 20rem;">
+              <div class="card-body">
+                <h4 class="card-title">Step 1: Choose base</h4>
+                <p class="card-text">Everyday Favorites</p>
+              </div>
+              <select id="pizza-base-select" class="form-control">
+                <option value="null">Please select a pizza base</option>
+                <option value="0">Cheese - $8sm</option>
+                <option value="1">Pepperoni - $10sm</option>
+                <option value="2">Pesto - $10sm</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group card" style="width: 20rem;">
+              <div class="card-body">
+                <h4 class="card-title">Step 2: Choose Size</h4>
+                <p class="card-text">See Size Guide</p>
+              </div>
+              <select id="pizza-size-select" class="form-control">
+                <option value="null">Please select a pizza size</option>
+                <option value="0">Small - No Extra Cost</option>
+                <option value="1">Medium - Add $4</option>
+                <option value="2">Large - Add $6</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group card" style="width: 20rem;">
+              <div class="card-body">
+                <h4 class="card-title">Step 3: Add Ons</h4>
+                <p class="card-text">$1 each - Locally Sourced</p>
+              </div>
+              <select id="pizza-size-select" class="form-control">
+                <option value="null">Please select add on</option>
+                <option value="0">Extra Cheese - $1</option>
+                <option value="1">Mushrooms - $1</option>
+                <option value="2">Sausage - $1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

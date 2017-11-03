@@ -19,8 +19,8 @@ _This application will allow the user to use a form to order a pizza, using java
 | User is able to see menu and make an initial selection |  Hawaiian Pizza | Hawaiian Pizza |
 | User is able to add additional pizzas to order |    Add Detroit Style Pizza   |   Hawaiian Pizza, Detroit Style Pizza |
 | User is able to add toppings on any pizza  | Add Extra Cheese to Hawaiian Pizza |   Hawaiian Pizza with extra cheese |
-| Application will display individual pizza price based on selection and toppings  | Hawaiian Pizza with extra cheese |  $22  |
-| Application will display total order price  | Hawaiian Pizza with extra cheese + Detroit Style |  $42  |
+| Application will display individual pizza price based on size selection and toppings  | Large Hawaiian Pizza with extra cheese |  $22  |
+| Application will display total order price  | Large Hawaiian Pizza with extra cheese + Large Detroit Style Pizza |  $42  |
 
 
 ## Support and contact details
